@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import './variables.css';
+
+/* Reset y base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  font-family: var(--fuente-texto);
+  background-color: var(--beige-antiguo);
+  color: var(--negro-suave);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Clases reutilizables */
+.titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 2.5rem;
+  color: var(--vino-oscuro);
+  margin-bottom: var(--espaciado);
+}
+.subtitulo {
+  font-family: var(--fuente-texto);
+  font-size: 1.25rem;
+  margin-bottom: calc(var(--espaciado) / 2);
+}
+.boton {
+  display: inline-block;
+  background-color: var(--dorado);
+  color: var(--negro-suave);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radio);
+  font-family: var(--fuente-ui);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.boton:hover { opacity: 0.8; }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--espaciado);
+}

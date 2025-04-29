@@ -1,0 +1,17 @@
+:root {
+    /* Colores */
+    --vino-oscuro: #800020;
+    --beige-antiguo: #f5f5dc;
+    --negro-suave: #1c1c1c;
+    --blanco-calido: #faf4e1;
+    --dorado: #bfa05a;
+  
+    /* Tipografías */
+    --fuente-titulo: 'Playfair Display', serif;
+    --fuente-texto: 'Lora', serif;
+    --fuente-ui: 'Roboto', sans-serif;
+  
+    /* Espaciado y bordes */
+    --espaciado: 1rem;
+    --radio: 0.5rem;
+  }
