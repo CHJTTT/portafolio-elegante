@@ -1,0 +1,103 @@
+/* components/sections/AboutSection.module.css */
+.aboutSection {
+  background-color: var(--color-background);
+  overflow: hidden; /* Para que el círculo decorativo no cause scroll */
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 4rem; /* Espacio vertical y horizontal */
+  align-items: center;
+  position: relative; /* Para líneas decorativas si las quieres */
+  z-index: 2; /* Encima del círculo decorativo */
+}
+
+.aboutImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Espacio alrededor */
+}
+
+.imageFrame {
+  width: clamp(280px, 80%, 400px); /* Tamaño adaptable */
+  height: auto; /* Altura automática basada en aspect ratio */
+  aspect-ratio: 3 / 4; /* Proporción más vertical */
+  border: 1px solid var(--color-accent); /* Borde dorado fino */
+  border-radius: 180px 180px 10px 10px; /* ¡El arco superior! Ajusta radios */
+  overflow: hidden; /* Recorta la imagen a la forma */
+  position: relative; /* Para pseudo elementos si añades más decoración */
+  box-shadow: var(--shadow-medium);
+}
+
+.aboutImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; Ya definido en el componente Image */
+}
+
+.aboutText {
+  text-align: center;
+  max-width: 600px; /* Limitar ancho del texto */
+  margin: 0 auto; /* Centrar */
+}
+
+.aboutGreeting {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--color-heading);
+    margin-bottom: 0.8em;
+    font-weight: normal; /* Más ligero que H1/H2 */
+}
+
+.aboutMainParagraph {
+    font-size: 1.15rem;
+    color: var(--color-text); /* Asegurar color */
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+}
+
+.aboutText p:not(.aboutMainParagraph) {
+    font-size: 1rem;
+    color: var(--color-text);
+    opacity: 0.85; /* Texto secundario un poco más tenue */
+}
+
+.aboutBtn {
+    margin-top: 2rem;
+}
+
+/* Elemento decorativo - Semicírculo/Engranaje */
+.decorativeCircle {
+    position: absolute;
+    bottom: -80px; /* Posición parcialmente fuera */
+    right: -50px; /* Posición parcialmente fuera */
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(200, 169, 126, 0.15); /* Borde acento muy tenue */
+    border-radius: 50%;
+    z-index: 1; /* Detrás del contenido */
+    /* Puedes añadir más detalles como líneas internas si quieres */
+    /* background: radial-gradient(circle, transparent 60%, rgba(200, 169, 126, 0.05) 61%); */
+}
+
+
+@media (min-width: 992px) { /* Ajusta el breakpoint */
+  .aboutContainer {
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 5rem;
+  }
+  .aboutImageWrapper {
+    justify-content: flex-end; /* Alinear imagen a la derecha de su columna */
+  }
+  .aboutText {
+    text-align: left; /* Alinear texto a la izquierda */
+    margin: 0; /* Quitar margen auto */
+    max-width: none;
+  }
+  .imageFrame{
+      /* Puedes ajustar tamaño si quieres */
+  }
+}

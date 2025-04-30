@@ -1,0 +1,27 @@
+/* src/components/layout/Footer.module.css */
+.mainFooter {
+  /* Reemplaza el fondo sólido con RGBA */
+  /* background-color: var(--color-text); */ /* Fondo original */
+  background-color: rgba(26, 26, 26, 0.95); /* Fondo #1a1a1a casi opaco - ¡AJUSTA OPACIDAD! */
+  color: var(--color-text); /* Texto claro */
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem; /* Espacio antes del footer */
+  position: relative; /* Necesario para z-index */
+  z-index: 1; /* Para estar sobre el fondo fijo del layout */
+}
+
+.mainFooter p {
+  margin-bottom: 0.5em;
+  color: var(--color-border); /* Texto un poco más apagado, como antes */
+  opacity: 0.7; /* Hacerlo aún más sutil */
+}
+
+.mainFooter a {
+  color: var(--color-accent); /* Enlaces con color acento */
+}
+
+.mainFooter a:hover {
+  color: var(--color-heading); /* Dorado viejo al hacer hover */
+}

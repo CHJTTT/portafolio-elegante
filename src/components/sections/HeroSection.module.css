@@ -1,0 +1,87 @@
+/* src/components/sections/HeroSection.module.css */
+.hero {
+  position: relative; /* Necesario para z-index y elementos internos posicionados */
+  z-index: 1; /* Para estar sobre el fondo fijo del layout */
+  min-height: 100vh; /* Ocupar toda la altura inicial */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text);
+  padding: 4rem 0;
+  overflow: hidden;
+  background-color: transparent; /* Asegurarse que sea transparente */
+}
+
+/* .heroBgImage y .heroOverlay ELIMINADOS */
+
+.heroContent {
+  position: relative; /* Mantiene su propia posición relativa */
+  z-index: 3; /* Debe estar encima de .bottomLine si es necesario */
+  max-width: 800px;
+  padding-top: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.heroGraphic {
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+  font-size: 2.5rem;
+  opacity: 0.8;
+}
+.initials {
+    font-family: var(--font-serif);
+    font-weight: bold;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+    line-height: 1;
+}
+
+
+.heroTitle {
+  font-size: 4rem;
+  color: var(--color-heading);
+  margin-bottom: 0.4em;
+  font-weight: 700;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  margin-bottom: 2.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heroBtn {
+  /* Estilo global .btn se aplica */
+}
+
+.bottomLine {
+    /* Estilos sin cambios, pero asegúrate que .heroContent tenga z-index mayor si hay solapamiento */
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background-color: var(--color-accent);
+    opacity: 0.5;
+    z-index: 2; /* Detrás del contenido principal */
+}
+
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 5.5rem;
+  }
+  .heroSubtitle {
+    font-size: 1.4rem;
+  }
+}

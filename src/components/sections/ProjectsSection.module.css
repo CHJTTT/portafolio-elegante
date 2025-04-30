@@ -1,0 +1,53 @@
+/* src/components/sections/ProjectsSection.module.css */
+.projectsSection {
+  /* Reemplaza el fondo sólido con RGBA */
+  /* background-color: var(--color-background-alt); */ /* Comentado/Eliminado */
+  background-color: rgba(26, 26, 26, 0.85); /* Fondo #1a1a1a con 85% opacidad - ¡AJUSTA OPACIDAD A TU GUSTO! (0.7 a 0.95) */
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  position: relative; /* Necesario para z-index */
+  z-index: 1; /* Para estar sobre el fondo fijo del layout */
+  overflow: hidden; /* Evitar problemas con elementos decorativos */
+}
+
+.projectGrid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 4rem 2.5rem;
+margin-top: 3rem;
+position: relative;
+z-index: 2; /* Encima del fondo de la sección pero debajo de conectores si es necesario */
+}
+
+.discoverMore {
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Conector decorativo (sin cambios en su lógica) */
+.decorativeLineConnector {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, var(--color-accent), transparent);
+  opacity: 0.4;
+  z-index: 1; /* Detrás del botón discoverMore */
+}
+.decorativeLineConnector::before,
+.decorativeLineConnector::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+}
+.decorativeLineConnector::before { top: -10px; }
+.decorativeLineConnector::after { bottom: -10px; }

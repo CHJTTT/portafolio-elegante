@@ -1,0 +1,81 @@
+/* src/components/layout/Header.module.css */
+
+.mainHeader {
+  /* ESTADO INICIAL TRANSPARENTE */
+  background-color: transparent; /* Fondo transparente por defecto */
+  padding: 1rem 0;
+  border-bottom: 1px solid transparent; /* Borde transparente por defecto */
+  position: fixed; /* Cambiado a fixed para que siempre esté arriba */
+  top: 0;
+  left: 0; /* Asegurar que ocupe todo el ancho */
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  z-index: 1000; /* Asegurar que esté por encima de todo */
+  box-shadow: none; /* Sin sombra por defecto */
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; /* Transición suave */
+}
+
+/* ESTADO AL HACER SCROLL (se añade la clase .scrolled) */
+.mainHeader.scrolled {
+  background-color: var(--color-background-alt); /* El color de fondo que tenías */
+  border-bottom-color: var(--color-border); /* El color de borde que tenías */
+  box-shadow: var(--shadow-light); /* La sombra que tenías */
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Hereda el .container de globals.css para el ancho y centrado */
+}
+
+.logo a {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-heading); /* Mantener color del logo */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Añadir transición por si cambia */
+}
+
+/* Puedes hacer que el logo cambie de color al hacer scroll si quieres */
+/* .mainHeader.scrolled .logo a {
+  color: var(--color-primary);
+} */
+
+.mainNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.mainNav a {
+  color: var(--color-text); /* Color inicial de los links */
+  text-decoration: none;
+  font-weight: 400;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo hover/focus no necesita cambiar, pero asegúrate que contraste bien */
+.mainNav a:hover,
+.mainNav a:focus {
+  color: var(--color-primary); /* O --color-accent si prefieres */
+  border-bottom-color: var(--color-primary); /* O --color-accent */
+  text-decoration: none;
+}
+
+/* Podrías querer cambiar el color de los links al hacer scroll si no contrastan bien */
+/* .mainHeader.scrolled .mainNav a {
+  color: var(--color-...?);
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainNav {
+    display: none;
+  }
+  /* Estilos para el menú hamburguesa irían aquí */
+}
