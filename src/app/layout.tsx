@@ -24,8 +24,8 @@ const playfairDisplay = Playfair_Display({
 
 // Metadatos de tu sitio
 export const metadata: Metadata = {
-  title: '[Tu Nombre] | Portafolio Dark Academia', // Cambia esto
-  description: 'Portafolio de [Tu Nombre], explorando la elegancia clásica en el desarrollo web.', // Cambia esto
+  title: 'PORTAFOLIO CN', // Cambia esto
+  description: 'Portafolio de Christian Chinchay, explorando la elegancia clásica en el desarrollo web.', // Cambia esto
 };
 
 export default function RootLayout({
@@ -49,7 +49,7 @@ export default function RootLayout({
             overflow: 'hidden', // Evita scrollbars si la imagen es ligeramente más grande
           }}
         >
-                  <Image
+                   {/* <Image
           src="/images/dark-library-bg.jpg" // <- Tu fondo
           alt="Fondo atmosférico de una biblioteca oscura..."
           fill // <-- USA 'fill'
@@ -63,7 +63,7 @@ export default function RootLayout({
             filter: 'brightness(0.6) contrast(1.1)', // Tu filtro
           }}
           // QUITA las props: layout, objectFit, objectPosition si estaban fuera de style
-        />
+        /> */}
           {/* --- Overlay Opcional sobre la imagen fija --- */}
           {/* Descomenta si necesitas oscurecer/teñir más que con el filtro */}
           {/*

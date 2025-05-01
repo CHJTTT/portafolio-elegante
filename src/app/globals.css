@@ -91,6 +91,12 @@ body {
   font-weight: 300; /* Más ligero para Lato */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    background-image: url('/images/dark-library-bg.jpg');
+  background-size: cover;   /* <<<----- CAMBIA A cover */
+  background-repeat: no-repeat;
+  background-position: center center; /* <<<--- Prueba 'center center', 'center top', 'center bottom' */
+  background-attachment: fixed;
+  background-color: var(--color-background);
 }
 
 /* 4. Estilos Generales de Texto y Enlaces */

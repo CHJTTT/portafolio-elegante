@@ -1,51 +1,86 @@
-/* components/sections/SkillsSection.module.css */
+/* src/components/sections/SkillsSection.module.css */
+
 .skillsSection {
-    background-color: var(--color-background); /* Fondo principal */
+  /* Define el fondo de la sección completa */
+  /* Usa un color sólido o uno semi-transparente */
+  background-color: var(--color-background); /* Fondo sólido marrón oscuro */
+  /* O si quieres ver el fondo del body a través: */
+  /* background-color: rgba(43, 33, 31, 0.9); */ /* Marrón oscuro 90% opaco */
+
+  position: relative; /* Mantenido por si acaso, aunque no es crucial aquí */
+  z-index: 1; /* Mantenido por si acaso */
 }
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas adaptables */
-  gap: 2.5rem;
-  margin-top: 2rem;
+  /* Crea columnas que se ajustan automáticamente, con un ancho mínimo de 250px */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem; /* Espacio entre las tarjetas de categoría */
+  margin-top: 2rem; /* Espacio después del título H2 */
 }
 
 .skillCategory {
-  background-color: var(--color-background-alt);
-  padding: 1.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
+  /* Tarjeta para cada grupo de habilidades (Lenguajes, Frameworks, etc.) */
+  background-color: var(--color-background); /* Fondo más oscuro para contraste */
+  padding: 1.5rem; /* Espacio interior */
+  border: 1px solid var(--color-border); /* Borde sutil */
+  border-radius: var(--border-radius); /* Bordes redondeados */
+  box-shadow: var(--shadow-light); /* Sombra ligera */
 }
 
 .categoryTitle {
+  /* Título dentro de cada tarjeta (Lenguajes, Frameworks, etc.) */
   font-size: 1.2rem;
-  color: var(--color-primary);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-serif); /* Fuente Serif para estos subtítulos */
+  color: var(--color-primary); /* Color vino */
+  margin-top: 0; /* Sin margen superior dentro de la tarjeta */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+  padding-bottom: 0.5rem; /* Espacio bajo el texto antes del borde */
+  border-bottom: 1px solid var(--color-border); /* Línea divisoria */
 }
 
 .skillList {
-  list-style: none; /* Ya quitado globalmente, pero por si acaso */
-  padding-left: 0;
+  list-style: none; /* Quita viñetas por defecto */
+  padding-left: 0; /* Quita padding por defecto */
+  margin: 0; /* Quita margen por defecto */
 }
 
 .skillItem {
-  margin-bottom: 0.7rem;
-  font-size: 0.95rem;
-  position: relative;
-  padding-left: 1.2em; /* Espacio para el marcador */
+  /* Contenedor para cada línea de habilidad (icono + nombre + nivel) */
+  display: flex;         /* Usa Flexbox para alinear elementos horizontalmente */
+  align-items: center;   /* Centra los elementos verticalmente en la línea */
+  gap: 0.8em;            /* Espacio horizontal entre icono, nombre y nivel */
+  margin-bottom: 0.9rem; /* Espacio vertical entre cada habilidad listada */
+  font-size: 0.95rem;    /* Tamaño de fuente base para la habilidad */
+}
+/* Elimina estilos anteriores de viñeta si los hubiera */
+/* .skillItem::before { display: none; } */
+
+
+.skillIcon {
+  /* Estilos para el icono de la habilidad */
+  font-size: 1.3em;       /* Tamaño relativo del icono */
+  color: var(--color-accent); /* Color dorado brillante */
+  flex-shrink: 0;       /* Evita que el icono se comprima si el texto es largo */
+  line-height: 0;         /* Ayuda a un mejor alineamiento vertical de algunos iconos */
+  /* Podrías añadir un width fijo si prefieres que todos ocupen lo mismo */
+  /* width: 1.5em; */
+  /* text-align: center; */
 }
 
-/* Marcador tipo viñeta clásica */
-.skillItem::before {
-    content: '•'; /* O podrías usar '–', '›', etc. */
-    position: absolute;
-    left: 0;
-    top: 0px; /* Ajusta verticalmente si es necesario */
-    color: var(--color-accent);
-    font-weight: bold; /* O normal */
-    font-size: 1.1em;
+.skillName {
+  /* Estilos para el nombre de la habilidad */
+  flex-grow: 1;         /* Permite que el nombre ocupe el espacio disponible */
+  color: var(--color-text); /* Color de texto principal (crema) */
+}
+
+.skillLevel {
+  /* Estilos para el nivel (Básico, Intermedio, Avanzado) */
+  font-size: 0.8em;       /* Texto más pequeño que el nombre */
+  color: var(--color-heading); /* Color dorado viejo/latón */
+  font-style: italic;     /* Cursiva para diferenciarlo */
+  opacity: 0.8;           /* Ligeramente atenuado */
+  white-space: nowrap;   /* Evita que "(Intermedio)" se parta en dos líneas */
+  margin-left: auto;      /* Opcional: Empuja el nivel a la derecha */
+                          /* Si quitas esto, quedará junto al nombre con el 'gap' definido en .skillItem */
 }

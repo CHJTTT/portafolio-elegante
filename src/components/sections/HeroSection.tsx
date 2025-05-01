@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className={`container ${styles.heroContent}`}>
         <div className={styles.heroGraphic}>
           {/* <FaFeatherAlt /> */}
-          <span className={styles.initials}>CN</span> {/* Tus iniciales */}
+          <span className={styles.initials}>CT</span> {/* Tus iniciales */}
         </div>
 
         <h1 className={styles.heroTitle}>

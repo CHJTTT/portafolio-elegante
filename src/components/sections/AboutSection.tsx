@@ -28,7 +28,7 @@ export default function AboutSection() {
         {/* Columna Derecha: Texto */}
         <div className={styles.aboutText}>
           {/* Título "I'm Elyse" adaptado */}
-          <h3 className={styles.aboutGreeting}>Descubre al Artesano</h3>
+          <h3 className={styles.aboutGreeting}>Sobre mi</h3>
           <p className={styles.aboutMainParagraph}>
             Fusiono la lógica rigurosa del desarrollo web con la sensibilidad estética inspirada en los clásicos. Cada línea de código es una pincelada; cada proyecto, una historia contada a través de la interacción digital.
           </p>

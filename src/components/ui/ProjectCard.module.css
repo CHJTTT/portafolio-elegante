@@ -1,16 +1,16 @@
-/* components/ui/ProjectCard.module.css */
+/* src/components/ui/ProjectCard.module.css */
+
 .card {
-  background-color: transparent; /* Sin fondo propio, usa el de la sección */
-  border: none; /* Sin borde general */
-  border-radius: 0; /* Sin redondeo general */
-  overflow: visible; /* Permitir que la forma inferior se salga */
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
   box-shadow: none;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrar elementos */
+  align-items: center;
 }
-
 .card:hover {
   transform: translateY(-8px);
 }
@@ -18,37 +18,44 @@
 .imageWrapper {
   position: relative;
   overflow: hidden;
-  width: 100%; /* Ocupar ancho */
-  aspect-ratio: 16 / 10; /* O la proporción que quieras */
-  border-radius: 10px; /* Redondear imagen */
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
   box-shadow: var(--shadow-medium);
-  border: 1px solid var(--color-border); /* Borde sutil */
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background); /* Fondo oscuro si imagen no llena */
+  cursor: pointer; /* <-- AÑADIDO: Indica clickeable para lightbox */
 }
 
 .cardImage {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* <<<--- CAMBIADO a contain para mostrar completa */
     transition: transform 0.4s ease;
 }
 
-.card:hover .cardImage {
-    transform: scale(1.03); /* Zoom ligero */
-}
+/* Puedes comentar o quitar el hover de la imagen si prefieres que no haga zoom */
+/* .card:hover .cardImage {
+    transform: scale(1.03);
+} */
+
 
 /* Contenedor inferior con la forma arqueada/ovalada */
 .cardContent {
-  background-color: var(--color-background); /* Fondo oscuro para el texto */
-  border: 1px solid var(--color-accent); /* Borde dorado */
-  width: 85%; /* Más estrecho que la imagen */
-  padding: 2.5rem 1.5rem 1.5rem 1.5rem; /* Padding: más arriba */
-  border-radius: 10px 10px 120px 120px; /* ¡La forma ovalada/arco inferior! */
-  margin-top: -40px; /* Solapar sobre la imagen */
-  position: relative; /* Para z-index */
-  z-index: 2; /* Encima de la imagen */
+  background-color: var(--color-background);
+  border: 1px solid var(--color-accent);
+  width: 85%;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 10px 10px 120px 120px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
   text-align: center;
   box-shadow: var(--shadow-medium);
+  display: flex;
+  flex-direction: column;
+  min-height: 200px; /* Ajusta si es necesario */
 }
 
 .cardTitle {
@@ -63,27 +70,55 @@
   font-size: 0.9rem;
   color: var(--color-text);
   opacity: 0.8;
-  margin-bottom: 1.5rem; /* Más espacio antes de links */
+  margin-bottom: 1rem;
   line-height: 1.6;
+  flex-grow: 1; /* Empuja iconos/links abajo */
 }
 
+/* Estilos para Iconos */
+.techIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.techIcon {
+  font-size: 1.6rem;
+  color: var(--color-text);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+.techIcon:hover {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+/* Estilos para los enlaces */
 .cardLinks {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-top: auto; /* Empuja al final */
 }
 
-.cardLinks a {
+.projectLink {
   font-size: 0.8rem;
   color: var(--color-accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  border: 1px solid var(--color-accent);
+  padding: 0.5em 1.2em;
+  border-radius: 50px;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-weight: 400;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.cardLinks a:hover {
-  color: var(--color-text);
+.projectLink:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  text-decoration: none;
 }

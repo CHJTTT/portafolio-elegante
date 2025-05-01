@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.mainFooter}>
       <div className="container">
         {/* Puedes añadir links a redes sociales aquí con iconos */}
-        <p>© {currentYear} [Tu Nombre]. Todos los derechos reservados.</p>
+        <p>© {currentYear} [Christian chinchay]. Todos los derechos reservados.</p>
         <p>Diseñado con inspiración clásica.</p>
       </div>
     </footer>
