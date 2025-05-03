@@ -43,9 +43,9 @@ const projects = [
   {
     title: 'Portafolio  (Este Sitio)',
     description: 'Mi portafolio personal diseñado con estética clasico, usando Next.js, React y CSS Modules para mostrar mis proyectos y habilidades.',
-    imageUrl: '/images/project-portfolio.jpg', // <-- CAMBIA A TU SCREENSHOT
+    imageUrl: '/images/project-portfolio.jpg', 
     techIcons: [TbBrandNextjs, FaReact, FaCss3Alt], // Ejemplo: Next.js, React, CSS
-    liveUrl: '#', // Actualiza cuando lo despliegues
+    liveUrl: 'https://portafolio-elegante.vercel.app/',
     repoUrl: 'https://github.com/CHJTTT/portafolio-elegante.git', // Asume este repo
   },
    { // Ejemplo para añadir más proyectos

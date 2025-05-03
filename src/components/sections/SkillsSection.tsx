@@ -18,7 +18,7 @@ interface Skill {
 const skillsData: { [key: string]: Skill[] } = {
   'Lenguajes': [
     { name: 'JavaScript (ES6+)', icon: FaJs, level: 'Intermedio' },
-    { name: 'TypeScript', icon: SiTypescript, level: 'Intermedio' },
+    { name: 'TypeScript', icon: SiTypescript, level: 'Básico' },
     { name: 'HTML5', icon: FaHtml5, level: 'Intermedio' },
     { name: 'CSS3/SASS', icon: SiSass, level: 'Intermedio' },
   ],
@@ -34,17 +34,17 @@ const skillsData: { [key: string]: Skill[] } = {
     { name: 'MongoDB', icon: SiMongodb, level: 'Básico' },
     { name: 'PostgreSQL', icon: SiPostgresql, level: 'Intermedio' },
     { name: 'MySQL', icon: SiMysql, level: 'Básico' },
-    { name: 'SQLServer', icon: FaDatabase, level: 'Básico' }, // Usando icono genérico
+    { name: 'SQLServer', icon: FaDatabase, level: 'Intermedio' }, // Usando icono genérico
   ],
   'Herramientas': [
     { name: 'Git', icon: FaGitAlt, level: 'Intermedio' },
-    { name: 'Docker', icon: FaDocker, level: 'Intermedio' },
+    { name: 'Docker', icon: FaDocker, level: 'Básico' },
     { name: 'Webpack', icon: SiWebpack, level: 'Básico' },
     { name: 'Figma', icon: SiFigma, level: 'Básico' },
   ],
   'Otros': [
-    { name: 'Diseño Responsivo', icon: FaReact, level: 'Avanzado' },
-    { name: 'APIs RESTful', icon: FaNodeJs, level: 'Intermedio' },
+    { name: 'Diseño Responsivo', icon: FaReact, level: 'Básico' },
+    { name: 'APIs RESTful', icon: FaNodeJs, level: 'Básico' },
     { name: 'Metodologías Ágiles', icon: FaReact, level: 'Intermedio' },
   ],
 };
