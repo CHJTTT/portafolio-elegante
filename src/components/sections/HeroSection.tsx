@@ -18,7 +18,7 @@ export default function HeroSection() {
            Christian Chinchay {/* Tu Nombre */}
         </h1>
         <p className={styles.heroSubtitle}>
-          Full Stack Developer {/* Tu subtítulo */}
+        Aspiring Full Stack Developer {/* Tu subtítulo */}
         </p>
         <Link href="/#projects" className={`btn ${styles.heroBtn}`}>
           Explorar Proyectos

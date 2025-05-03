@@ -6,7 +6,8 @@ import { useState } from 'react'; // Importa useState
 import ProjectCard from '../ui/ProjectCard';
 import Link from 'next/link';
 import styles from './ProjectsSection.module.css';
-
+import { SiTypescript, SiExpress, SiMongodb, SiPostgresql, SiMysql, SiWebpack, SiFigma, SiSass, SiPrisma, SiTailwindcss, SiFramer, } from 'react-icons/si'; // <- Añadido SiPrisma
+import { FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaGitAlt, FaDatabase, FaEnvelope } from 'react-icons/fa'; // Incluye FaDatabase si usas SQLServer genérico
 // Importa Lightbox y sus estilos
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -15,19 +16,27 @@ import "yet-another-react-lightbox/styles.css";
 // import "yet-another-react-lightbox/plugins/zoom.css";
 
 // --- Importa los iconos de tecnología que usarás ---
-import { FaReact, FaCss3Alt } from 'react-icons/fa'; // Ajusta según tus proyectos
+
 import { TbBrandNextjs } from 'react-icons/tb'; // Ajusta según tus proyectos
 // Añade más importaciones de iconos si es necesario
 
 // --- Define los datos de tus proyectos ---
-// ¡¡¡IMPORTANTE!!! Reemplaza imageUrl con rutas a imágenes REALES en tu carpeta public/images/
-// y ajusta las techIcons, descripciones y enlaces a la realidad.
+
+
 const projects = [
   {
     title: 'Yarlos Asesoría Web',
     description: 'Página web informativa y de contacto para servicios de asesoría, enfocada en un diseño limpio, profesional y responsivo.',
     imageUrl: '/images/project-yarlos.jpg', // <-- CAMBIA A TU SCREENSHOT
-    techIcons: [TbBrandNextjs, FaReact], // Ejemplo: Next.js, React
+    techIcons: [
+      TbBrandNextjs,
+      FaReact,
+      SiTypescript,
+      SiTailwindcss,
+      SiFramer,
+      FaEnvelope,
+    ],
+    
     liveUrl: 'https://yarlos-asesoria-iuef.vercel.app/',
     repoUrl: 'https://github.com/CHJTTT/yarlos-asesoria.git',
   },
@@ -39,14 +48,23 @@ const projects = [
     liveUrl: '#', // Actualiza cuando lo despliegues
     repoUrl: 'https://github.com/CHJTTT/portafolio-elegante.git', // Asume este repo
   },
-  // { // Ejemplo para añadir más proyectos
-  //   title: 'Otro Proyecto',
-  //   description: 'Descripción de otro proyecto...',
-  //   imageUrl: '/images/project-otro.jpg',
-  //   techIcons: [/* Iconos */],
-  //   liveUrl: '#',
-  //   repoUrl: '#',
-  // },
+   { // Ejemplo para añadir más proyectos
+    title: 'Sistema de ventas',
+     description: 'Tienda online de productos orgánicos con panel de administración, gestión de productos y contacto.',
+    imageUrl: '/images/project-otro.jpg',
+    techIcons: [
+      TbBrandNextjs,
+      FaReact,
+      SiTypescript,
+      SiTailwindcss,
+      SiPostgresql,
+      FaDocker,
+      SiPrisma
+      
+    ],
+    liveUrl: 'https://ecomarket1.vercel.app/',
+     repoUrl: 'https://github.com/CHJTTT/ecomarket1.git',
+   },
 ];
 
 // --- El Componente Principal ---

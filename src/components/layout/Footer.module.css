@@ -1,27 +1,54 @@
 /* src/components/layout/Footer.module.css */
 .mainFooter {
-  /* Reemplaza el fondo sólido con RGBA */
-  /* background-color: var(--color-text); */ /* Fondo original */
-  background-color: rgba(26, 26, 26, 0.95); /* Fondo #1a1a1a casi opaco - ¡AJUSTA OPACIDAD! */
-  color: var(--color-text); /* Texto claro */
-  padding: 2rem 0;
-  text-align: center;
+  /* Fondo sólido oscuro o semi-transparente, como prefieras */
+  background-color: var(--color-background-alt); /* Ejemplo sólido */
+  /* background-color: rgba(43, 33, 31, 0.95); */ /* Ejemplo semi-transparente */
+  color: var(--color-text);
+  padding: 2.5rem 0 2rem 0; /* Ajusta padding (un poco más arriba) */
+  text-align: center; /* Centra el texto DENTRO del container */
   font-size: 0.9rem;
-  margin-top: 4rem; /* Espacio antes del footer */
-  position: relative; /* Necesario para z-index */
-  z-index: 1; /* Para estar sobre el fondo fijo del layout */
+  margin-top: 4rem;
+  position: relative;
+  z-index: 1; /* Por si acaso, relativo al contenido */
 }
 
+/* Estilos para los párrafos de texto en el footer */
 .mainFooter p {
   margin-bottom: 0.5em;
-  color: var(--color-border); /* Texto un poco más apagado, como antes */
-  opacity: 0.7; /* Hacerlo aún más sutil */
+  color: var(--color-primary); /* Color vino */
+  font-size: 1.1rem; /* Tamaño ajustado */
+  font-family: var(--font-serif); /* Fuente Serif */
+  opacity: 0.9; /* Ligeramente menos opaco que antes */
+}
+.mainFooter p:last-of-type {
+    margin-bottom: 0; /* Quita margen inferior al último párrafo */
 }
 
+/* Estilos para enlaces generales dentro del footer (si los hubiera) */
 .mainFooter a {
-  color: var(--color-accent); /* Enlaces con color acento */
+  color: var(--color-accent);
+}
+.mainFooter a:hover {
+  color: var(--color-heading);
 }
 
-.mainFooter a:hover {
-  color: var(--color-heading); /* Dorado viejo al hacer hover */
+/* Estilos para la sección de iconos sociales */
+.socialLinks {
+  margin-bottom: 1.5rem; /* Espacio entre iconos y texto */
+  display: flex;
+  justify-content: center; /* Centra los iconos horizontalmente */
+  gap: 1.5rem; /* Espacio entre iconos */
+}
+
+.socialIcon {
+  font-size: 1.8rem; /* Tamaño de iconos */
+  color: var(--color-text);
+  opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: var(--color-accent);
+  opacity: 1;
+  transform: scale(1.1);
 }

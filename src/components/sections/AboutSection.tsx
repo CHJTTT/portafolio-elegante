@@ -30,10 +30,10 @@ export default function AboutSection() {
           {/* Título "I'm Elyse" adaptado */}
           <h3 className={styles.aboutGreeting}>Sobre mi</h3>
           <p className={styles.aboutMainParagraph}>
-            Fusiono la lógica rigurosa del desarrollo web con la sensibilidad estética inspirada en los clásicos. Cada línea de código es una pincelada; cada proyecto, una historia contada a través de la interacción digital.
+          Soy un estudiante de desarrollo web apasionado por construir aplicaciones completas, explorando tanto el frontend como el backend. Me inspira la elegancia del diseño moderno y la lógica estructurada, buscando fusionarlas para crear experiencias digitales funcionales y consideradas.
           </p>
           <p>
-            Mi pasión radica en construir no solo sitios funcionales, sino experiencias inmersivas que evocan la calidez de una biblioteca antigua o la armonía de una pieza de jazz bien ejecutada.
+          Siempre estoy en proceso de aprendizaje, profundizando en tecnologías como React, Next.js y Node.js, y abierto a nuevos desafíos y oportunidades para crecer.
           </p>
           {/* <Link href="/contacto" className={`btn ${styles.aboutBtn}`}>Más sobre mí</Link> */}
         </div>
