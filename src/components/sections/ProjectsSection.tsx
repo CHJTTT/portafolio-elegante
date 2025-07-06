@@ -37,7 +37,7 @@ const projects = [
       FaEnvelope,
     ],
     
-    liveUrl: 'https://yarlos-asesoria-iuef.vercel.app/',
+    liveUrl: 'https://yarlos-asesoria.vercel.app/',
     repoUrl: 'https://github.com/CHJTTT/yarlos-asesoria.git',
   },
   {
